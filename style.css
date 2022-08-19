@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#time {
+    color : #2c3e50;
+    font-size: 100px;
+    font-family: 'Chosunilbo_myungjo';
+    font-weight: 700;
+}
+
+#user {
+    margin-top: -70px;
+    color : #2c3e50;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 29px;
+}
+
+#userInput {
+    width: 350px;
+    height: 30px;
+    border-radius: 50px 50px;
+    border: solid;
+    text-align: center;
+    font-family: 'Chosunilbo_myungjo';
+}
+
+.timeZone {
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.inputOk {
+    visibility: hidden;
+}
+
