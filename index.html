@@ -6,13 +6,20 @@
         <link rel="stylesheet" href="style.css"></link>
     </head>
     <body>
-        <div class="timeZone">
+        <div class="operateZone">
             <form id="form">
                 <p id="time"> 00:00:00 </p>
                 <p id="user"></p>
-                <input type="text" id="userInput" placeholder="Plz enter your name!" class="inputOk"></input>
+                <input type="text" id="userInput" placeholder="Plz enter your name!"></input>
             </form>
+            <form id="toDoform" >
+                <input type="text" id="toDoInput" placeholder="Plz enter your To-Do list!"></input>
+            </form>
+            <div id="toDoList">
+            </div>
         </div>
-        <script src="pratice.js"></script>
+        
+        <script src="timer.js"></script>
+        <script src="toDoList.js"></script>
     </body>
 </html>

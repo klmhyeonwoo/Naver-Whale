@@ -7,28 +7,60 @@
 
 #time {
     color : #2c3e50;
-    font-size: 100px;
+    font-size: 80px;
     font-family: 'Chosunilbo_myungjo';
     font-weight: 700;
 }
 
 #user {
-    margin-top: -70px;
+    margin-top: -60px;
     color : #2c3e50;
     font-family: 'Chosunilbo_myungjo';
-    font-size: 29px;
+    font-size: 23px;
 }
 
 #userInput {
     width: 350px;
-    height: 30px;
+    height: 40px;
     border-radius: 50px 50px;
     border: solid;
+    border-width: 2px;
+    text-align: center;
+    font-family: 'Chosunilbo_myungjo';
+    margin-bottom: 10px;
+}
+
+#toDoInput {
+    width: 350px;
+    height: 40px;
+    border-radius: 50px 50px;
+    border: solid;
+    border-width: 2px;
     text-align: center;
     font-family: 'Chosunilbo_myungjo';
 }
 
-.timeZone {
+#userInput:focus, #toDoInput:focus {
+    outline-color: #2ecc71;
+    transition: 0.3s all;
+}
+
+.delBtn {
+    border-radius: 50px 50px;
+    margin: 4px;
+    width: 50px;
+    height : 30px;
+    border: solid;
+    background-color: white;
+    font-family: 'Chosunilbo_myungjo';
+}
+
+.toDoList {
+    font-family: 'Chosunilbo_myungjo';
+    margin: 4px;
+}
+
+.operateZone {
     position: absolute;
     top : 50%;
     left : 50%;

@@ -43,7 +43,6 @@ function loadName() {
     else {   
         paintGreeting(currentUser);
     }
-    console.log(currentUser);
 }
 
 function init() { // 위에서 설계하였던 함수들을 여기서 실행
