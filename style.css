@@ -33,6 +33,45 @@ html, body {
     contain: layout paint style;   
 }
 
+.weatherContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 1px 1pxrgba(0,0,0,.4);
+    color: #fff;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all 1s;
+}
+
+.weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 1px 1pxrgba(0,0,0,.4);
+    color: #fff;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    max-width: 135px;
+    font-size: 14px;
+    height: 30px;
+    margin-bottom: 27px;
+    font-weight: 700;
+    box-sizing: content-box;
+    padding: 0 10px;
+    border-radius: 5px;
+    background: transparent;
+    white-space: nowrap;
+    line-height: 0;
+}
+
 .searchContainer {
     display: flex;
     width: 100%;
@@ -70,6 +109,7 @@ input {
     font-size: 16px;
     font-weight: 700;
     height: 30px;
+    transition: all 1s;
 }
 
 .backgroundWallpaper {

@@ -2,6 +2,8 @@ const logo = document.querySelector('#naverLogo');
 const search = document.querySelector('.search');
 const searchForm = document.querySelector('.searchForm');
 const imageInfo = document.querySelector('.imageInfo');
+const weatherContainer = document.querySelector('.weatherContainer');
+const timeContainer = document.querySelector('.clock');
 
 searchForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -20,10 +22,14 @@ search.addEventListener('focusout', (e) => {
 
 imageInfo.addEventListener('mouseover', (e) => {
     searchForm.style.opacity = "0";
+    weatherContainer.style.opacity = "0";
+    timeContainer.style.opacity = "0";
 })
 
 imageInfo.addEventListener('mouseout', (e) => {
     searchForm.style.opacity = "1";
+    weatherContainer.style.opacity = "1";
+    timeContainer.style.opacity = "1";
 })
 
 imageInfo.addEventListener('click', (e) => {
