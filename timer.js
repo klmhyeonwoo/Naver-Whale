@@ -6,10 +6,19 @@ const userName = "name";
 
 function getDate() { // 자바스크립트 시간 객체 얻어오는 함수
     const date = new Date()
-    const hours = date.getHours();
     const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
-    time.innerHTML = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+    // const seconds = date.getSeconds();
+    let hours = date.getHours();
+    let meridiem = "AM";
+    
+    if (hours > 13) {
+        hours = date.getHours() - 12;
+        meridiem = "PM";
+    }
+    else {
+        meridiem = "AM";
+    }
+    time.innerHTML = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes} ${meridiem}`;
 }
 
 function saveName(text) { // 로컬 스토리지에 name의 key 값과 text 매개변수의 value 값 입력

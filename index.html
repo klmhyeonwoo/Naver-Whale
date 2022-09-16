@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> NAVER WHALE WITH V-JS </title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css"></link>
+        <link rel="shortcut icon" href="favicon.ico"></link>
+        <title> 네이버 웨일 </title>
     </head>
     <body>
 
@@ -19,10 +20,17 @@
         </div>
 
         <div class="middleWare">
+            <div class="weatherContainer">
+                <span class="weather">
+                    위치를 찾는 중..
+                </span>
+            </div>
             <div class="clock">
                 <p id="time"> 00:00:00 </p>
             </div>
         </div>
+
+
 
             <div class="operateZone">
                     <div class="searchContainer">
@@ -47,13 +55,13 @@
                 <div id="toDoList">
                 </div>
                 -->
-
         </div>
 
         <script src="timer.js"></script>
+        <script src="search.js"></script>
+        <script src="weather.js"></script>
         <!--
         <script src="toDoList.js"></script>
         <script src="weather.js"></script> -->
-        <script src="search.js"></script>
     </body>
 </html>
