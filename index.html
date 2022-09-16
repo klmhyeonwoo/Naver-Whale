@@ -1,25 +1,59 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Vanilia JS Pratice </title>
+        <title> NAVER WHALE WITH V-JS </title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css"></link>
     </head>
     <body>
-        <div class="operateZone">
-            <form id="form">
-                <p id="time"> 00:00:00 </p>
-                <p id="user"></p>
-                <input type="text" id="userInput" placeholder="Plz enter your name!"></input>
-            </form>
-            <form id="toDoform" >
-                <input type="text" id="toDoInput" placeholder="Plz enter your To-Do list!"></input>
-            </form>
-            <div id="toDoList">
-            </div>
+
+        <div class="wallpaper">
+            <img src="https://whale-store.pstatic.net/20191111_286/1573440796151Svjpk_PNG/nightwhale_img01.png" class="backgroundWallpaper"/>
         </div>
         
+        <div class="imageInfo">
+            <div class="imageInfo-text">
+                <button type="button" class="imageInfo-btn imageInfo-btn-a"> &nbsp;다크 스페이스 웨일  </button>
+                <button type="button" class="imageInfo-btn imageInfo-btn-b"> NAVER Whale  </button>
+            </div>
+        </div>
+
+        <div class="middleWare">
+            <div class="clock">
+                <p id="time"> 00:00:00 </p>
+            </div>
+        </div>
+
+            <div class="operateZone">
+                    <div class="searchContainer">
+                        <form class="searchForm">
+                            <div class="searchDetail">
+                                <a href="https://www.naver.com" class="searchLogo">
+                                    <img src="./logo.png" width="20" height="20" id="naverLogo"/>
+                                </a>
+                                <input type="text" class="search" placeholder="검색어를 입력하세요"></input>
+                            </div>
+                        </form>
+                    </div>
+                <!--
+                <form id="form">
+                    <p id="time"> 00:00:00 </p>
+                    <p id="user"></p>
+                    <input type="text" class="userInput" id="userInput" placeholder="Plz enter your name!"></input>
+                </form>
+                <form id="toDoform" >
+                    <input type="text" class="toDoInput" id="toDoInput" placeholder="Plz enter your To-Do list!"></input>
+                </form>
+                <div id="toDoList">
+                </div>
+                -->
+
+        </div>
+
         <script src="timer.js"></script>
+        <!--
         <script src="toDoList.js"></script>
+        <script src="weather.js"></script> -->
+        <script src="search.js"></script>
     </body>
 </html>

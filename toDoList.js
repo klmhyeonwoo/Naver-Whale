@@ -2,12 +2,14 @@ const toDoform = document.querySelector('#toDoform');
 const toDo = toDoform.querySelector('#toDoInput');
 const toDoList = document.querySelector('#toDoList');
 
+
 let lst = [];
 const TODOS_LS = "toDoList";
 
+
 function loadToDo() {
     const loadedToDo = localStorage.getItem(TODOS_LS);
-    if (loadToDo !== null) {
+    if (loadedToDo !== null) {
         const parseToDo = JSON.parse(loadedToDo);
         parseToDo.forEach(element => {
             paintToDo(element.text);
@@ -70,7 +72,6 @@ function init() {
     const loadedToDo = localStorage.getItem(TODOS_LS);
     loadToDo();   
     askForToDo();
-
 }
 
 init();

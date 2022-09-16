@@ -5,11 +5,182 @@
     font-style: normal;
 }
 
-#time {
-    color : #2c3e50;
-    font-size: 80px;
-    font-family: 'Chosunilbo_myungjo';
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+::placeholder {
+    color : white;
+}
+
+html, body {
+    color : white;
+}
+
+.wallpaper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    contain: layout paint style;   
+}
+
+.searchContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+input {
+    outline: none;
+}
+
+.middleWare {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    height: 60px;
+    padding-inline: 40px;
+    z-index: 30;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 16px;
     font-weight: 700;
+    height: 30px;
+}
+
+.backgroundWallpaper {
+    width: 100%;
+    height: 100%;
+}
+
+.searchForm {
+    width: 560px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: hsla(0,0%,100%,.5);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    z-index: 3;
+    color: #000;
+    transition: background-color .3s,box-shadow .3s, opacity 1s; 
+    box-shadow: 0 4px 30px rgb(0 0 0 / 25%);
+}
+
+.searchForm:focus-within {
+    background-color: hsla(0,0%,100%,.92);
+    box-shadow: 0 6px 30px rgb(0 0 0 / 15%);
+}
+
+.search {
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+    border: 0;
+    background: transparent;
+    font-size: 16px;
+    letter-spacing: -.25pt;
+    -webkit-padding-before: 3px;
+    padding-block-start: 3px;
+    color: #000;
+}
+
+.imageInfo {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 0 0 34px 40px;
+    white-space: nowrap;
+    cursor: default;
+    --text-a-color: hsla(0,0%,100%,0.7);
+    --text-b-color: hsla(0,0%,100%,0.3);
+}
+
+.imageInfo-btn {
+    background: none;
+    border: none;
+}
+
+.imageInfo-btn-a {
+    font-size: 14px;
+    color: var(--text-a-color);
+    transition: color .25s;
+}
+
+.imageInfo-btn-b {
+    font-size: 13px;
+    color: var(--text-b-color);
+    transition: color .25s;
+}
+
+.imageInfo:hover {
+    --text-a-color: #fff;
+    --text-b-color: hsla(0,0%,100%,0.6);
+}
+
+.imageInfo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    pointer-events: auto;
+}
+
+.imageInfo-text {
+
+}
+
+.clickedSearch::placeholder {
+    color: #a8a8a8;
+}
+
+.searchLogo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 53px;
+    min-width: 53px;
+    height: 48px;
+    transition: color .1s;
+}
+
+#naverLogo {
+    animation: fadein 0.3s;
+    -moz-animation: fadein 0.3s; /* Firefox */
+    -webkit-animation: fadein 0.3s; /* Safari and Chrome */
+    -o-animation: fadein 0.3s; /* Opera */
+}
+
+.searchDetail {
+    display: flex;
+    align-items: center;
 }
 
 #user {
@@ -23,26 +194,34 @@
     width: 350px;
     height: 40px;
     border-radius: 50px 50px;
-    border: solid;
+    border: none;
     border-width: 2px;
     text-align: center;
     font-family: 'Chosunilbo_myungjo';
     margin-bottom: 10px;
+    outline: 2px solid transparent;
+    transition: all 0.5s ease-out;
+}
+
+#userInput:focus {
+    outline: 2px solid #2ecc71;
 }
 
 #toDoInput {
     width: 350px;
     height: 40px;
     border-radius: 50px 50px;
-    border: solid;
+    border: none;
     border-width: 2px;
     text-align: center;
     font-family: 'Chosunilbo_myungjo';
+    transition: all 0.5s ease-out;
+    outline: 2px solid transparent;
+    margin-bottom: 10px;
 }
 
-#userInput:focus, #toDoInput:focus {
-    outline-color: #2ecc71;
-    transition: 0.3s all;
+#toDoInput:focus {
+    outline: 2px solid #2ecc71;
 }
 
 .delBtn {
@@ -62,10 +241,21 @@
 
 .operateZone {
     position: absolute;
-    top : 50%;
-    left : 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: background-color .5s,opacity 1s ease-in-out;
+    transition-delay: 0s;
+    background-color: rgba(0,0,0,.2);
+    overflow: hidden;
+    z-index: 2;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .inputOk {
